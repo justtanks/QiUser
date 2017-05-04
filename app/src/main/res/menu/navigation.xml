@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@mipmap/home_home_check"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@mipmap/home_daili"
+        android:title="代理人" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@mipmap/home_util_check"
+        android:title="工具" />
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@mipmap/home_mine_check"
+        android:title="@string/home_tab_mine" />
+
+</menu>

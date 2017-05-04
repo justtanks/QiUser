@@ -2,5 +2,26 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4081</color>
+
+    <color name="gray">#cccccc</color>
+    <color name="gray1">#999999</color>
+    <color name="gray3">#333333</color>
+    <color name="gray2">#666666</color>
+    <color name="item_hadformtx">#666666</color>
+    <color name="zhucecolortitle">#ffde00</color>
+
+    <color name="maincolor">#FFCA28</color>
+    <color name="orange">#FFe000</color> <!-- 橙色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="colortabtext">#999999</color>
+    <color name="titlecolor">#FFECEC02</color>
+
+    <!--黑色透明-->
+    <color name="transparent1">#9000</color>
+    <color name="home_background">#f8f7f3</color>
+    <color name="titletextcolor">#701585</color>
+    <color name="search_hint_color">#e1e1e1</color>
+    <color name="home_textcolor">#333333</color>
+
 </resources>

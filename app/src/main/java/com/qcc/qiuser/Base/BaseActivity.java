@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.umeng.analytics.MobclickAgent;
+
 /**
  * Created by Administrator on 2016/12/28.
  * activity基类
@@ -15,12 +17,13 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        MobclickAgent.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        MobclickAgent.onPause(this);
 
     }
 

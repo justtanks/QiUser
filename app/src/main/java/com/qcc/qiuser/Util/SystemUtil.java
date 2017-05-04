@@ -7,6 +7,8 @@ import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
+import java.io.FileReader;
+
 
 /**
  * 记录用户基本信息
@@ -27,15 +29,16 @@ public class SystemUtil {
     private static final String MODEL_STATE = "modle_state";
     private static final String IS_SHOW = "is_show";
     private static final String REGESTERSTATE = "regesterstate";
-    private static final String ISRENZHENG = "isrenzheng";
+    private static final String FISRTLOGIN = "firstlogin";
+
     public SystemUtil(Context context) {
         this.context = context;
     }
 
     /*
-    保存是否注册
+    保存是否登录
      */
-    public void saveRegesterState(int state) {
+    public void saveLoginState(int state) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
         Editor editor = preferences.edit();
@@ -43,13 +46,29 @@ public class SystemUtil {
         editor.commit();
     }
 
-    public int showRegesterState() {
+    public int showLoginState() {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
         int state = preferences.getInt(REGESTERSTATE, -1);//默认-1没有注册
         return state;
     }
 
+    //显示是否是第一次打开
+    private boolean isFirstLogin() {
+        SharedPreferences preferences = context.getSharedPreferences(MINE,
+                Context.MODE_PRIVATE);
+        boolean isfrst = preferences.getBoolean(FISRTLOGIN, false);//默认-1没有注册
+        return isfrst;
+    }
+
+    //记录第一次打开
+    private void saveFirstLog(boolean isFirst) {
+        SharedPreferences preferences = context.getSharedPreferences(MINE,
+                Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.putBoolean(FISRTLOGIN, isFirst);
+        editor.commit();
+    }
 
 
     public void saveIsShow(int num) {
@@ -84,9 +103,9 @@ public class SystemUtil {
     }
 
 
-/*
-  用户头像
- */
+    /*
+      用户头像
+     */
     public void saveUserHeader(String url) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -109,7 +128,8 @@ public class SystemUtil {
         String url = preferences.getString(USER_HEADER, "");
         return url;
     }
-   //添加认证状态
+
+    //添加认证状态
     public void saveIsRenZheng(int onlyID) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -118,7 +138,7 @@ public class SystemUtil {
         editor.commit();
     }
 
-// 获取认证状态
+    // 获取认证状态
     public int showIsRenzheng() {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -134,21 +154,6 @@ public class SystemUtil {
         editor.commit();
     }
 
-  //保存认证状态
-    public int showRensheng() {
-        SharedPreferences preferences = context.getSharedPreferences(MINE,
-                Context.MODE_PRIVATE);
-        int uid = preferences.getInt(ISRENZHENG, -1);
-        return uid;
-    }
-    public void saveRenzheng(int uid) {
-        SharedPreferences preferences = context.getSharedPreferences(MINE,
-                Context.MODE_PRIVATE);
-        Editor editor = preferences.edit();
-        editor.putInt(ISRENZHENG, uid);
-        editor.commit();
-    }
-
 
     public int showUid() {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
@@ -156,9 +161,10 @@ public class SystemUtil {
         int uid = preferences.getInt(UID, -1);
         return uid;
     }
-/*
-支付状态
- */
+
+    /*
+    支付状态
+     */
     public void saveZhifuR(int state) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -173,9 +179,10 @@ public class SystemUtil {
         int state = preferences.getInt(ZHIFU, -1);
         return state;
     }
-/*
-记住密码状态
- */
+
+    /*
+    记住密码状态
+     */
     public void saveRemember(int remember) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -190,9 +197,10 @@ public class SystemUtil {
         int remember = preferences.getInt(RMEMBER, -1);
         return remember;
     }
-/*
-保存用户名
- */
+
+    /*
+    保存用户名
+     */
     public void saveName(String name) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
@@ -225,6 +233,7 @@ public class SystemUtil {
         String Name = preferences.getString(PHONE, "");
         return Name;
     }
+
     /*
       密码保存
      */
@@ -244,7 +253,7 @@ public class SystemUtil {
     }
 
     public static void saveOpenID(String openID) {
-        SharedPreferences preferences =context.getSharedPreferences(
+        SharedPreferences preferences = context.getSharedPreferences(
                 MINE, Context.MODE_PRIVATE);
         Editor editor = preferences.edit();
         editor.putString(OPENID, openID);
@@ -264,6 +273,7 @@ public class SystemUtil {
         Editor editor = preferences.edit();
         editor.clear().commit();
     }
+
     /**
      * 返回当前程序版本名
      */
@@ -283,16 +293,16 @@ public class SystemUtil {
         }
         return versionName;
     }
+
     /*
      获取程序当前版本号
      */
-    public static  float getVersionCode()
-    {
+    public static float getVersionCode() {
 
         PackageManager packageManager = context.getPackageManager();
         PackageInfo packInfo = null;
         try {
-            packInfo = packageManager.getPackageInfo(context.getPackageName(),0);
+            packInfo = packageManager.getPackageInfo(context.getPackageName(), 0);
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
