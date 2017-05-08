@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:background="@color/maincolor"
+        android:background="@color/zhucecolortitle"
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
@@ -88,61 +88,68 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-            <LinearLayout
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:orientation="horizontal"
-                android:background="@color/home_background"
-                >
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_centerHorizontal="true"
-                    >
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@mipmap/home_search"
-                        android:scaleType="fitXY"
-                        />
-                    <ImageView
-                        android:id="@+id/search_tab"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/home_sousuo"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="10dp"
-                        />
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_head"
+                android:scaleType="fitXY"
+                />
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="55dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:background="@color/home_background"-->
+                <!--&gt;-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginEnd="10dp"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--android:layout_marginTop="7dp"-->
+                    <!--android:layout_marginBottom="7dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--&gt;-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:src="@mipmap/home_search"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--/>-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/search_tab"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@mipmap/home_sousuo"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginStart="10dp"-->
+                        <!--/>-->
 
-                    <EditText
-                        android:id="@+id/home_search_edit"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:textColorHint="@color/search_hint_color"
-                        android:textSize="16sp"
-                        android:inputType="text"
-                        android:maxLines="1"
-                        android:background="@null"
-                        android:imeOptions="actionSearch"
-                        android:hint="商标注册进度查询"
-                        android:layout_alignParentTop="true"
-                        android:layout_toEndOf="@+id/search_tab" />
-                </RelativeLayout>
+                    <!--<EditText-->
+                        <!--android:id="@+id/home_search_edit"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:textColorHint="@color/search_hint_color"-->
+                        <!--android:textSize="16sp"-->
+                        <!--android:inputType="text"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:background="@null"-->
+                        <!--android:imeOptions="actionSearch"-->
+                        <!--android:hint="商标注册进度查询"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_toEndOf="@+id/search_tab" />-->
+                <!--</RelativeLayout>-->
 
-            </LinearLayout>
+            <!--</LinearLayout>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@color/white"
+                android:layout_marginTop="10dp"
                 >
 
                 <LinearLayout
@@ -171,7 +178,7 @@
                             android:textSize="12dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:text="注册查询"
+                            android:text="注册前查询"
                             android:textColor="@color/home_textcolor"
                             />
 
@@ -187,7 +194,7 @@
                             android:id="@+id/home_img_reg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_regis"
+                            android:src="@mipmap/home_chaxun"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -197,7 +204,7 @@
                             android:textSize="12dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:text="注册前查询"
+                            android:text="商标查询"
                             android:textColor="@color/home_textcolor"
                             />
                     </LinearLayout>
@@ -212,7 +219,7 @@
                             android:id="@+id/home_img_buy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_shangbiaogoumai"
+                            android:src="@mipmap/home_regist"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -238,7 +245,7 @@
                             android:id="@+id/home_world_reg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_guojizhuce"
+                            android:src="@mipmap/home_zizhu"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -272,7 +279,7 @@
                             android:id="@+id/home_img_search"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_chaxun"
+                            android:src="@mipmap/home_help"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -282,7 +289,7 @@
                             android:textSize="12dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="5dp"
-                            android:text="代理人注册"
+                            android:text="人工服务"
                             android:textColor="@color/home_textcolor"
                             />
 
@@ -300,7 +307,7 @@
                             android:id="@+id/home_img_fenlei"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_shangbiaofenlie"
+                            android:src="@mipmap/home_jindu"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -324,7 +331,7 @@
                             android:id="@+id/home_img_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_pinpaiqim"
+                            android:src="@mipmap/home_fenlei"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -349,7 +356,7 @@
                             android:id="@+id/home_img_jindu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@mipmap/home_jindu"
+                            android:src="@mipmap/home_vi"
                             android:layout_marginTop="10dp"
                             android:layout_gravity="center_horizontal"
                             />
@@ -409,6 +416,7 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/home_showimg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/home_jinduchaxun"

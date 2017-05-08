@@ -1,6 +1,7 @@
 package com.qcc.qiuser.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
@@ -11,6 +12,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.qcc.qiuser.Activity.WaiterActivity;
 import com.qcc.qiuser.Base.BaseFragment;
 import com.qcc.qiuser.R;
 
@@ -23,8 +26,8 @@ import org.xutils.view.annotation.ViewInject;
 
 @ContentView(R.layout.fragment_home)
 public class HomeFragment extends BaseFragment implements TextView.OnEditorActionListener ,View.OnClickListener{
-    @ViewInject(R.id.home_search_edit)
-    private EditText msearchText;
+//    @ViewInject(R.id.home_search_edit)
+//    private EditText msearchText;
     @ViewInject(R.id.fragment_home_head)
     private ImageView mheadImg;
     @ViewInject(R.id.home_msgbt)
@@ -45,6 +48,8 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
     private ImageView mfenlei;
     @ViewInject(R.id.home_img_jindu)
     private ImageView mregSearch;
+    @ViewInject(R.id.home_showimg)
+    private ImageView mShow;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +62,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
         initview();
     }
     private void initview() {
-        msearchText.setOnEditorActionListener(this);
+//        msearchText.setOnEditorActionListener(this);
         mheadImg.setOnClickListener(this);
         mbuy.setOnClickListener(this);
         mfenlei.setOnClickListener(this);
@@ -69,6 +74,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
         msearchBefore.setOnClickListener(this);
         mworldRig.setOnClickListener(this);
         msearch.setOnClickListener(this);
+        mShow.setOnClickListener(this);
 
     }
 
@@ -93,6 +99,8 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
         switch (view.getId()){
             case R.id.home_search_before:
                 Toast.makeText(getContext(), "前查询", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getActivity(), WaiterActivity.class);
+                startActivity(intent);
                 break;
             case R.id.home_img_reg:
                 Toast.makeText(getContext(), "注册", Toast.LENGTH_SHORT).show();
@@ -121,7 +129,9 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
             case R.id.home_msgbt:
                 Toast.makeText(getContext(), "头像", Toast.LENGTH_SHORT).show();
                 break;
-
+            case R.id.home_showimg:
+                Toast.makeText(getContext(), "图片仅作为展示，不可点击", Toast.LENGTH_SHORT).show();
+                break;
             default:
                 break;
 
