@@ -269,6 +269,14 @@
                     />
             </LinearLayout>
 
+            <com.qcc.qiuser.View.ItemContainer
+                android:id="@+id/waiter_bestarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+            </com.qcc.qiuser.View.ItemContainer>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
@@ -402,12 +410,15 @@
                             android:textColor="@color/gray2"
                             />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginStart="7dp"
-                            android:src="@mipmap/waiter_pingl"
+                            android:layout_marginStart="8dp"
+                            android:progressDrawable="@drawable/progressbar"
+                            android:max="100"
+                            android:progress="100"
                             />
                     </LinearLayout>
 
@@ -426,12 +437,15 @@
                             android:textColor="@color/gray2"
                             />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="7dp"
-                            android:src="@mipmap/waiter_pingl"
+                            android:progressDrawable="@drawable/progressbar"
+                            android:max="100"
+                            android:progress="50"
                             />
                     </LinearLayout>
 
@@ -450,12 +464,16 @@
                             android:textColor="@color/gray2"
                             />
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        <ProgressBar
+                            android:id="@+id/waiter_chapin_progress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="7dp"
-                            android:src="@mipmap/waiter_pingl"
+                            android:progressDrawable="@drawable/progressbar"
+                            android:max="100"
+                            android:progress="10"
                             />
                     </LinearLayout>
                 </LinearLayout>

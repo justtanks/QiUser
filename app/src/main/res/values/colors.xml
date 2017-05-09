@@ -24,4 +24,6 @@
     <color name="search_hint_color">#e1e1e1</color>
     <color name="home_textcolor">#333333</color>
 
+    <color name="bestareatextcolor">#009fff</color>
+
 </resources>
