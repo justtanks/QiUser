@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qcc.qiuser">
+          package="com.qcc.qiuser">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <application
         android:name=".Application.MyApplication"
@@ -15,25 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Activity.MainActivity"></activity>
-        <activity
-            android:name=".Activity.HomeTabActivity"
-          >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".Activity.MainActivity"/>
+        <activity android:name=".Activity.HomeTabActivity">
         </activity>
-         <activity android:name=".Activity.WaiterActivity"></activity>
+        <activity android:name=".Activity.WaiterActivity"/>
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="590a82c2a40fa3250400065f" />
+            android:value="590a82c2a40fa3250400065f"/>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="yingyongbao" />
+            android:value="yingyongbao"/>
+
+        <activity android:name=".Activity.IntroDuceActivity">
+        </activity>
+        <activity android:name=".Activity.WellcomeActivity">
+        </activity>
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.RegistActivity">
+        </activity>
     </application>
 
 </manifest>

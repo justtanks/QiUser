@@ -5,10 +5,40 @@
                 android:background="@color/home_background"
     >
 
+    <RelativeLayout
+        android:id="@+id/waiter_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/zhucecolortitle"
+        >
+
+        <ImageButton
+            android:id="@+id/waitermsg_back"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/fanhui"
+            />
+
+        <TextView
+            android:id="@+id/waiter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="刘超"
+            android:textColor="@color/titletextcolor"
+            android:textSize="18sp"
+            />
+    </RelativeLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/waiter_bts"
+        android:layout_below="@id/waiter_titlebar"
         android:scrollbars="none"
         >
 
@@ -17,34 +47,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="@color/zhucecolortitle"
-                >
-
-                <ImageButton
-                    android:id="@+id/waitermsg_back"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:src="@mipmap/fanhui"
-                    />
-
-                <TextView
-                    android:id="@+id/waiter_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="刘超"
-                    android:textColor="@color/titletextcolor"
-                    android:textSize="16sp"
-                    />
-            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -416,9 +418,9 @@
                             android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="8dp"
-                            android:progressDrawable="@drawable/progressbar"
                             android:max="100"
                             android:progress="100"
+                            android:progressDrawable="@drawable/progressbar"
                             />
                     </LinearLayout>
 
@@ -443,9 +445,9 @@
                             android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="7dp"
-                            android:progressDrawable="@drawable/progressbar"
                             android:max="100"
                             android:progress="50"
+                            android:progressDrawable="@drawable/progressbar"
                             />
                     </LinearLayout>
 
@@ -471,9 +473,9 @@
                             android:layout_height="8dp"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="7dp"
-                            android:progressDrawable="@drawable/progressbar"
                             android:max="100"
                             android:progress="10"
+                            android:progressDrawable="@drawable/progressbar"
                             />
                     </LinearLayout>
                 </LinearLayout>

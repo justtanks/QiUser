@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#ff4081</color>
+    <color name="colorAccent">#cccccc</color>
 
     <color name="gray">#cccccc</color>
     <color name="gray1">#999999</color>
@@ -23,7 +23,6 @@
     <color name="titletextcolor">#701585</color>
     <color name="search_hint_color">#e1e1e1</color>
     <color name="home_textcolor">#333333</color>
-
     <color name="bestareatextcolor">#009fff</color>
-
+    <color name="hintcolor">#a9adc1</color>
 </resources>
