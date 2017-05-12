@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-
 import com.google.gson.Gson;
 import com.qcc.qiuser.Base.BaseActivity;
 import com.qcc.qiuser.Base.BaseData;
@@ -15,9 +14,7 @@ import com.qcc.qiuser.Bean.Regist_phoneback;
 import com.qcc.qiuser.R;
 import com.qcc.qiuser.Util.NetUtils;
 import com.qcc.qiuser.databinding.ActivityRegistBinding;
-
 import org.xutils.common.Callback;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,17 +47,12 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.regist_getyanzheng:
-                getYanzheng();
+                getTextOnNet();
                 break;
         }
     }
 
-    // 点击获取验证码之后的操作
-    private void getYanzheng() {
-        b.registGetyanzheng.setClickable(false);
-        getTextOnNet();
 
-    }
 
     private class PhoneWatcher implements TextWatcher {
 
@@ -118,6 +110,7 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             toast("请输入手机号");
             return;
         }
+        b.registGetyanzheng.setClickable(false);
         handler.post(runnable);
         Map<String, String> apends = new HashMap<>();
         apends.put("agent_tel", phone);
@@ -209,7 +202,6 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             } else {
                 handler.sendEmptyMessage(2);
             }
-
         }
     };
 }

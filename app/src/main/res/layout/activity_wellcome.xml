@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.qcc.qiuser.Activity.WellcomeActivity">
-
-    <android.support.v4.view.ViewPager
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"
+        android:src="@mipmap/regist_back"
+        />
+
 </LinearLayout>

@@ -21,4 +21,8 @@
     <string name="regist_byphone"><![CDATA[手机快速注册>>]]></string>
     <string name="forgetpass">忘记密码?</string>
     <string name="net_error">网络错误,请检查网络是否连接</string>
+    <string name="mine">我的</string>
+    <string name="daijiedan">待结单</string>
+    <string name="daipingjia">待评价</string>
+    <string name="yipingjia">已评价</string>
 </resources>

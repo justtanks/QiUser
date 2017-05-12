@@ -54,15 +54,15 @@ public class SystemUtil {
     }
 
     //显示是否是第一次打开
-    private boolean isFirstLogin() {
+    public boolean isFirstLogin() {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
-        boolean isfrst = preferences.getBoolean(FISRTLOGIN, false);//默认-1没有注册
+        boolean isfrst = preferences.getBoolean(FISRTLOGIN, true);//默认-1没有注册
         return isfrst;
     }
 
     //记录第一次打开
-    private void saveFirstLog(boolean isFirst) {
+    public void saveFirstLog(boolean isFirst) {
         SharedPreferences preferences = context.getSharedPreferences(MINE,
                 Context.MODE_PRIVATE);
         Editor editor = preferences.edit();

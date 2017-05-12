@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.MainActivity"/>
         <activity android:name=".Activity.HomeTabActivity">
+
         </activity>
         <activity android:name=".Activity.WaiterActivity"/>
 
@@ -28,15 +29,15 @@
             android:value="yingyongbao"/>
 
         <activity android:name=".Activity.IntroDuceActivity">
-        </activity>
-        <activity android:name=".Activity.WellcomeActivity">
-        </activity>
-        <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".Activity.WellcomeActivity">
+        </activity>
+        <activity android:name=".Activity.LoginActivity">
         </activity>
         <activity android:name=".Activity.RegistActivity">
         </activity>
