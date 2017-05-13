@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.qcc.qiuser.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */

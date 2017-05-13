@@ -3,7 +3,6 @@ package com.qcc.qiuser.Bean;
 import java.util.List;
 
 /**
- * Created by Administrator on 2017/1/9.
  * 短信验证返回的数据
  */
 

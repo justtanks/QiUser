@@ -8,12 +8,12 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qcc.qiuser.Activity.WaiterActivity;
+import com.qcc.qiuser.Activity.TanTanActivity;
 import com.qcc.qiuser.Base.BaseFragment;
 import com.qcc.qiuser.R;
 
@@ -104,6 +104,8 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
                 break;
             case R.id.home_img_reg:
                 Toast.makeText(getContext(), "注册", Toast.LENGTH_SHORT).show();
+                Intent intent1=new Intent(getActivity(), TanTanActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.home_img_buy:
                 Toast.makeText(getContext(), "商标购买", Toast.LENGTH_SHORT).show();

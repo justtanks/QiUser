@@ -17,7 +17,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.MainActivity"/>
         <activity android:name=".Activity.HomeTabActivity">
-
         </activity>
         <activity android:name=".Activity.WaiterActivity"/>
 
@@ -41,6 +40,9 @@
         </activity>
         <activity android:name=".Activity.RegistActivity">
         </activity>
+        <activity android:name=".Activity.ShowWaitersActivity">
+        </activity>
+        <activity android:name=".Activity.TanTanActivity"></activity>
     </application>
 
 </manifest>
