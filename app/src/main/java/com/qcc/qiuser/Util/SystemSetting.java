@@ -14,7 +14,7 @@ import java.io.FileReader;
  * 记录用户基本信息
  */
 
-public class SystemUtil {
+public class SystemSetting {
     private static final String MINE = "qsuser";
     private static Context context;
     private static final String OPENID = "openID";
@@ -31,7 +31,7 @@ public class SystemUtil {
     private static final String REGESTERSTATE = "regesterstate";
     private static final String FISRTLOGIN = "firstlogin";
 
-    public SystemUtil(Context context) {
+    public SystemSetting(Context context) {
         this.context = context;
     }
 

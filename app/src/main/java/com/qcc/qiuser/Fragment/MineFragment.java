@@ -35,7 +35,12 @@ public class MineFragment extends BaseFragment{
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
+//                getChildFragmentManager();   //double contain in the fragment
+//                getParentFragment();
             }
         });
+    }
+    public void setImText(String string){
+        b.textView4.setText(string);
     }
 }

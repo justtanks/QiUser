@@ -25,4 +25,8 @@
     <string name="daijiedan">待结单</string>
     <string name="daipingjia">待评价</string>
     <string name="yipingjia">已评价</string>
+    <string name="zonghe">综合</string>
+    <string name="haoping">好评</string>
+    <string name="chengdan">成单量</string>
+    <string name="haopingshu">好评数</string>
 </resources>

@@ -23,14 +23,15 @@ import com.qcc.qiuser.databinding.ActivityHomeTabBinding;
 import java.util.ArrayList;
 
 //首页的底部带有tab的activity
-public class HomeTabActivity extends BaseActivity implements ViewPager.OnPageChangeListener{
+public class HomeTabActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
     ActivityHomeTabBinding b;
-    private ArrayList<Fragment> mList=new ArrayList<>();
-    HomeFragment mHomeFragment=new HomeFragment();
-    UtilsFragment mUtilsFragment=new UtilsFragment();
-    MineFragment mMineFragment =new MineFragment();
-    WaitersFragment mWaitersFragment=new WaitersFragment();
+    private ArrayList<Fragment> mList = new ArrayList<>();
+    HomeFragment mHomeFragment = new HomeFragment();
+    UtilsFragment mUtilsFragment = new UtilsFragment();
+    MineFragment mMineFragment = new MineFragment();
+    WaitersFragment mWaitersFragment = new WaitersFragment();
     MenuItem prevMenuItem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,17 +41,16 @@ public class HomeTabActivity extends BaseActivity implements ViewPager.OnPageCha
         initAdapter();
     }
 
-    private void initAdapter(){
+    private void initAdapter() {
         mList.add(mHomeFragment);
         mList.add(mWaitersFragment);
         mList.add(mUtilsFragment);
         mList.add(mMineFragment);
         b.homeVp.setCurrentItem(0);
-        b.homeVp.setOffscreenPageLimit(3);
+        b.homeVp.setOffscreenPageLimit(4);
         b.homeVp.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager(), mList));//解决fragment嵌套问题
         b.homeVp.addOnPageChangeListener(this);
     }
-
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -70,7 +70,7 @@ public class HomeTabActivity extends BaseActivity implements ViewPager.OnPageCha
                     return true;
                 case R.id.navigation_mine:
                     b.homeVp.setCurrentItem(3);
-                    return true;
+                     return true;
             }
             return false;
         }
@@ -90,7 +90,7 @@ public class HomeTabActivity extends BaseActivity implements ViewPager.OnPageCha
             b.homeNavigation.getMenu().getItem(0).setChecked(false);
         }
         b.homeNavigation.getMenu().getItem(position).setChecked(true);
-        prevMenuItem =  b.homeNavigation.getMenu().getItem(position);
+        prevMenuItem = b.homeNavigation.getMenu().getItem(position);
     }
 
     @Override

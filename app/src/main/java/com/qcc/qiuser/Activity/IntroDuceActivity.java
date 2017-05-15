@@ -14,7 +14,7 @@ import com.qcc.qiuser.Fragment.Intro1Fragment;
 import com.qcc.qiuser.Fragment.Intro2Fragment;
 import com.qcc.qiuser.Fragment.Intro3Fragment;
 import com.qcc.qiuser.R;
-import com.qcc.qiuser.Util.SystemUtil;
+import com.qcc.qiuser.Util.SystemSetting;
 import com.qcc.qiuser.databinding.ActivityIntroDuceBinding;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class IntroDuceActivity extends AppCompatActivity {
     Intro1Fragment mIntro1Fragment = new Intro1Fragment();
     Intro2Fragment mIntro2Fragment = new Intro2Fragment();
     Intro3Fragment mIntro3Fragment = new Intro3Fragment();
-    SystemUtil su=new SystemUtil(this);
+    SystemSetting su=new SystemSetting(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
