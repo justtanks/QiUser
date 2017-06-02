@@ -1,12 +1,17 @@
 package com.qcc.qiuser.Activity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
+import android.support.v4.content.FileProvider;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+
 import com.google.gson.Gson;
 import com.qcc.qiuser.Base.BaseActivity;
 import com.qcc.qiuser.Base.BaseData;
@@ -14,7 +19,9 @@ import com.qcc.qiuser.Bean.Regist_phoneback;
 import com.qcc.qiuser.R;
 import com.qcc.qiuser.Util.NetUtils;
 import com.qcc.qiuser.databinding.ActivityRegistBinding;
+
 import org.xutils.common.Callback;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,8 +30,9 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
     ActivityRegistBinding b;
     Map<String, Boolean> isEnable = new HashMap<>();
     Gson gson = new Gson();
-    String yanzheng;
+    int yanzheng;
     String userphone;
+    ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +49,7 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
         b.registPass.addTextChangedListener(new PWatcher());
         b.registYanzheng.addTextChangedListener(new YanZheng());
         b.registGetyanzheng.setOnClickListener(this);
+        b.registBt.setOnClickListener(this);
     }
 
     @Override
@@ -49,9 +58,11 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             case R.id.regist_getyanzheng:
                 getTextOnNet();
                 break;
+            case R.id.regist_bt:
+                registOnNet();
+                break;
         }
     }
-
 
 
     private class PhoneWatcher implements TextWatcher {
@@ -118,7 +129,8 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             @Override
             public void onSuccess(String result) {
                 Regist_phoneback phoneMsg = gson.fromJson(result, Regist_phoneback.class);
-                yanzheng = phoneMsg.getMsg();
+                yanzheng = Integer.parseInt(phoneMsg.getMsg());
+                loge(yanzheng+"返回的验证码");
                 userphone = phone;
             }
 
@@ -189,7 +201,6 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
                     b.registGetyanzheng.setText(R.string.getyanzheng);
                     break;
             }
-
         }
     };
     private Runnable runnable = new Runnable() {
@@ -204,4 +215,51 @@ public class RegistActivity extends BaseActivity implements View.OnClickListener
             }
         }
     };
+
+    //服务器进行注册
+    private void registOnNet() {
+         String yanzhengStr = b.registYanzheng.getText().toString();
+        if (yanzhengStr.equals("")) {
+            toast("请输入验证码");
+            return;
+        }
+        int yanzhengma = Integer.parseInt(yanzhengStr);
+        if (yanzhengma != yanzheng) {
+            toast("验证码错误,请重新输入");
+            return;
+        }
+        mProgressDialog = ProgressDialog.show(this, "", "正在进行注册");
+        mProgressDialog.show();
+        Map<String, Object> param = new HashMap<>();
+        param.put("user", b.registPhone.getText());
+        param.put("password", b.registPass.getText());
+        NetUtils.Post(BaseData.USERREGIST, param, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Regist_phoneback back = new Gson().fromJson(result, Regist_phoneback.class);
+                if ("Success".equals(back.getFlag())) {
+                    startActivity(new Intent(RegistActivity.this, LoginActivity.class));
+                } else {
+                    toast(back.getMsg());
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                toast("注册失败，请检查网络后重试");
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+                mProgressDialog.dismiss();
+            }
+        });
+    }
+
 }

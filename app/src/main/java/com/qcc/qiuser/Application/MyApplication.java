@@ -3,8 +3,6 @@ package com.qcc.qiuser.Application;
 import android.app.Application;
 
 import org.xutils.x;
-
-
 /**
  * Created by Administrator on 2016/12/28.
  */

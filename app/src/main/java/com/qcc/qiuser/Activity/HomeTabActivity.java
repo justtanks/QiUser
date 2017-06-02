@@ -6,10 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
-
 import com.qcc.qiuser.Adapter.FragmentPagerAdapter;
 import com.qcc.qiuser.Base.BaseActivity;
 import com.qcc.qiuser.Fragment.HomeFragment;
@@ -19,6 +16,7 @@ import com.qcc.qiuser.Fragment.WaitersFragment;
 import com.qcc.qiuser.R;
 import com.qcc.qiuser.Util.BottomNavigationViewHelper;
 import com.qcc.qiuser.databinding.ActivityHomeTabBinding;
+
 
 import java.util.ArrayList;
 

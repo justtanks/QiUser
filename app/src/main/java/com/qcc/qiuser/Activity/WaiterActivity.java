@@ -41,7 +41,6 @@ public class WaiterActivity extends BaseActivity {
             initBestArea();
         }
 
-
     }
 
     private void init() {
@@ -66,10 +65,6 @@ public class WaiterActivity extends BaseActivity {
         button.setGravity(Gravity.CENTER);
         button.setTextSize(8);
         button.setTextColor(getResources().getColor(R.color.bestareatextcolor));
-
-            mItemContainer.addView(button);
-
-
-
+        mItemContainer.addView(button);
     }
 }

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qcc.qiuser.Activity.LoginActivity;
 import com.qcc.qiuser.Activity.WaiterActivity;
 import com.qcc.qiuser.Activity.TanTanActivity;
 import com.qcc.qiuser.Base.BaseFragment;
@@ -108,7 +109,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
                 startActivity(intent1);
                 break;
             case R.id.home_img_buy:
-                Toast.makeText(getContext(), "商标购买", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
             case R.id.home_world_reg:
                 Toast.makeText(getContext(), "国际注册", Toast.LENGTH_SHORT).show();

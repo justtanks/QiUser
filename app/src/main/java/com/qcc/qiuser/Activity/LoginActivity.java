@@ -1,16 +1,24 @@
 package com.qcc.qiuser.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 
+import com.google.gson.Gson;
 import com.qcc.qiuser.Base.BaseActivity;
+import com.qcc.qiuser.Base.BaseData;
+import com.qcc.qiuser.Bean.Regist_phoneback;
 import com.qcc.qiuser.R;
+import com.qcc.qiuser.Util.NetUtils;
 import com.qcc.qiuser.databinding.ActivityLoginBinding;
+
+import org.xutils.common.Callback;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +27,7 @@ import java.util.Map;
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     ActivityLoginBinding b;
     Map<String, Boolean> isEnable = new HashMap<>();
+    ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     private void init() {
         b.loginRegist.setOnClickListener(this);
+        b.loginBt.setOnClickListener(this);
         b.loginUsername.addTextChangedListener(new NameWatcher());
         b.loginUserpass.addTextChangedListener(new PWatcher());
         isEnable.put("name", false);
@@ -42,7 +52,47 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 Intent intent = new Intent(this, RegistActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.login_bt:
+                loginOnNet();
+                break;
         }
+    }
+
+    //进行登录操作
+    private void loginOnNet() {
+        mProgressDialog = ProgressDialog.show(this, "", "正在登陆。。。");
+        mProgressDialog.show();
+        Map<String, Object> param = new HashMap<>();
+        param.put("user", b.loginUsername.getText());
+        param.put("password", b.loginUserpass.getText());
+        NetUtils.Post(BaseData.USERlOGIN, param, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Regist_phoneback back = new Gson().fromJson(result, Regist_phoneback.class);
+                if ("Success".equals(back.getFlag())) {
+                    toast("登录成功");
+                }else{
+                    toast(back.getMsg());
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                loge(ex.getMessage());
+                toast("登录失败");
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+                mProgressDialog.dismiss();
+            }
+        });
+
     }
 
     class NameWatcher implements TextWatcher {

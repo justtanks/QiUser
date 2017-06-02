@@ -8,9 +8,9 @@
     android:orientation="vertical"
     tools:context="com.qcc.qiuser.Activity.WellcomeActivity">
     <ImageView
+        android:id="@+id/welcome_pic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/regist_back"
         />
 
 </LinearLayout>
