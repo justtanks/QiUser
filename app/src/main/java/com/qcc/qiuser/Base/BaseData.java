@@ -1,6 +1,9 @@
 package com.qcc.qiuser.Base;
 
-//存放相应的接口在这里
+/**
+
+ *
+ */
 public class BaseData {
     public static final String BASEURL = "http://121.199.32.4:8088";
     public static final String BASEPOSITON = "http://www.qichengcheng.cn";
@@ -14,5 +17,6 @@ public class BaseData {
     public static final String USERlOGIN = BASEURL + "/Home/App/denglu";
     //http://www.qichengcheng.cn/Home/App/zhuce/user/18266142739/password/222222
     public static final String USERREGIST = BASEURL + "/Home/App/zhuce/";
+
 
 }

@@ -18,6 +18,5 @@ public class ShowWaitersActivity extends AppCompatActivity {
 
     private void init() {
 
-
     }
 }

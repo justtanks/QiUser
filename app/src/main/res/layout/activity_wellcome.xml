@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.qcc.qiuser.Activity.WellcomeActivity">
+    tools:context="com.qcc.qiuser.Activity.kotlinActivity.WellcomeActivity">
     <ImageView
         android:id="@+id/welcome_pic"
         android:layout_width="match_parent"

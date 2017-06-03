@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 
+import com.qcc.qiuser.Activity.kotlinActivity.WellcomeActivity;
 import com.qcc.qiuser.Fragment.Intro1Fragment;
 import com.qcc.qiuser.Fragment.Intro2Fragment;
 import com.qcc.qiuser.Fragment.Intro3Fragment;
