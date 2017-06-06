@@ -1,6 +1,5 @@
 package com.qcc.qiuser.Activity;
 
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
@@ -15,35 +14,41 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.qcc.qiuser.Base.BaseActivity;
-import com.qcc.qiuser.Fragment.MineFragment;
+import com.qcc.qiuser.Bean.WaitersBean;
 import com.qcc.qiuser.R;
 import com.qcc.qiuser.View.ItemContainer;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by Administrator on 2017/5/8.
  */
 
-public class WaiterActivity extends BaseActivity {
+public class WaiterActivity1 extends BaseActivity {
     LinearLayout content;
     ItemContainer mItemContainer;
-    ProgressBar haoping,zhongping,chaping;
+    ProgressBar haoping, zhongping, chaping;
+    WaitersBean.DataBean.personDataBean mPersonDataBean;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter);
+        init();
+    }
+
+    private void init() {
         content = (LinearLayout) this.findViewById(R.id.waiter_judgecontainer);
         mItemContainer = (ItemContainer) findViewById(R.id.waiter_bestarea);
-        chaping= (ProgressBar) findViewById(R.id.waiter_chapin_progress);
+        chaping = (ProgressBar) findViewById(R.id.waiter_chapin_progress);
+        mPersonDataBean= (WaitersBean.DataBean.personDataBean) getIntent().getSerializableExtra("waiterdata");
+
         for (int i = 0; i < 10; i++) {
-            init();
+            initPinglun();
             initBestArea();
         }
 
     }
 
-    private void init() {
+    private void initPinglun() {
         View view = getLayoutInflater().inflate(R.layout.item_waiter_judge, content, false);
         TextView name = (TextView) view.findViewById(R.id.judge_name);
         TextView judge = (TextView) view.findViewById(R.id.judge_content);
@@ -54,8 +59,9 @@ public class WaiterActivity extends BaseActivity {
         judge.setText("是傻逼'");
         content.addView(view);
     }
+
     //初始化所有擅长领域的button
-    private void initBestArea(){
+    private void initBestArea() {
         Button button = new Button(getApplicationContext());
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT
                 , 0);

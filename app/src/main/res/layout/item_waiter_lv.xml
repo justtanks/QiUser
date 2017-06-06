@@ -4,7 +4,7 @@
     <data>
         <variable
             name="waitersdata"
-            type="com.qcc.qiuser.Bean.WaitersBean.DataBean.WaiterBean"></variable>
+            type="com.qcc.qiuser.Bean.WaitersBean.DataBean.personDataBean"></variable>
 
         <variable
             name="base"

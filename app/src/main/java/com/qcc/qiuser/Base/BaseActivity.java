@@ -43,18 +43,20 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
-      public void loge(String logMsg){
-          Log.e("log",logMsg);
+    public void loge(String logMsg) {
+        Log.e("log", logMsg);
 
     }
-    public void loge(String key,String logMsg){
-        Log.e(key,logMsg);
+
+    public void loge(String key, String logMsg) {
+        Log.e(key, logMsg);
     }
 
-    public void toast(String msg){
+    public void toast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
-    public void longToast(String msg){
+
+    public void longToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
 

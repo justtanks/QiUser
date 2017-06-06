@@ -3,9 +3,11 @@ package com.qcc.qiuser.Base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import org.xutils.x;
 
@@ -40,5 +42,20 @@ public class BaseFragment extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
+    }
+    public void loge(String logMsg) {
+        Log.e("log", logMsg);
+    }
+
+    public void loge(String key, String logMsg) {
+        Log.e(key, logMsg);
+    }
+
+    public void toast(String msg) {
+        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    public void longToast(String msg) {
+        Toast.makeText(getContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

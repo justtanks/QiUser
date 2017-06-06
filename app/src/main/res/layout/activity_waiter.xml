@@ -60,6 +60,7 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
                     android:src="@mipmap/simple_hewad"
                     />
 
@@ -100,6 +101,7 @@
                     >
 
                     <TextView
+                        android:id="@+id/waiter_chengdan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -133,6 +135,7 @@
                     >
 
                     <TextView
+                        android:id="@+id/waiter_haoping"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -165,6 +168,7 @@
                     >
 
                     <TextView
+                        android:id="@+id/waiter_jingyan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -190,31 +194,32 @@
                     android:src="@mipmap/waiter_shuxian"
                     />
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--&gt;-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="1000"
-                        android:textColor="@color/zhucecolortitle"
-                        />
+                    <!--<TextView-->
+                        <!--android:id="@+id/waiter_location"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="1000"-->
+                        <!--android:textColor="@color/zhucecolortitle"-->
+                        <!--/>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginBottom="6dp"
-                        android:text="地址"
-                        android:textColor="@color/gray2"
-                        />
-                </RelativeLayout>
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginBottom="6dp"-->
+                        <!--android:text="地址"-->
+                        <!--android:textColor="@color/gray2"-->
+                        <!--/>-->
+                <!--</RelativeLayout>-->
             </LinearLayout>
 
             <LinearLayout
@@ -234,6 +239,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/waiter_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -319,6 +325,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/waiter_jinyantxt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="10dp"

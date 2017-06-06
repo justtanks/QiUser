@@ -30,11 +30,11 @@ import java.util.List;
  * 代理人综合排序的frament 按照成单量进行分组
  */
 
-public class ChengDanFragment extends BaseFragment  {
+public class ChengDanFragment extends BaseFragment {
     ListView lv;
     HomeTabActivity activity;
-    List<WaitersBean.DataBean.WaiterBean> datas = new ArrayList<>();
-    ListAdapter<WaitersBean.DataBean.WaiterBean> adapter;
+    List<WaitersBean.DataBean.personDataBean> datas = new ArrayList<>();
+    ListAdapter<WaitersBean.DataBean.personDataBean> adapter;
 
     @Nullable
     @Override
@@ -54,20 +54,22 @@ public class ChengDanFragment extends BaseFragment  {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent(activity, ShareWaiterActivity.class);
-//                if (datas != null && datas.size() != 0) {
-//                    intent.putExtra("waiterid", datas.get(position).getId());
-//                    intent.putExtra("waiterpic", datas.get(position).getWaiter_pic());
-//                }
-//                startActivity(intent);
+                Intent intent = new Intent(activity, WaiterActivity.class);
+                if (datas != null && datas.size() != 0) {
+                    intent.putExtra("waiterdata", datas.get(position));
+                }
+                startActivity(intent);
             }
         });
 
     }
+
     @Subscribe
-    public void onMessageEvent(WaitersBean event){
-         adapter.setDatas(event.getData().get(0).getOrders());
+    public void onMessageEvent(WaitersBean event) {
+        datas = event.getData().get(0).getOrder();
+        adapter.setDatas(datas);
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
