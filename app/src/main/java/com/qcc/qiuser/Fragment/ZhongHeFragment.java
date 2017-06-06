@@ -8,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.qcc.qiuser.Activity.HomeTabActivity;
-import com.qcc.qiuser.Activity.WaiterActivity;
+import com.qcc.qiuser.Activity.kotlinActivity.WaiterActivity;
 import com.qcc.qiuser.Adapter.simpleAdapter.ListAdapter;
 import com.qcc.qiuser.BR;
 import com.qcc.qiuser.Base.BaseFragment;

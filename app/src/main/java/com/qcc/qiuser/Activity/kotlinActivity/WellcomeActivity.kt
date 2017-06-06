@@ -39,6 +39,7 @@ class WellcomeActivity : BaseActivity() {
     private fun toLogin() {
         val intent = Intent(this, HomeTabActivity::class.java)
         startActivity(intent)
+
     }
 
     private fun testTestNull() {

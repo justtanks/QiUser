@@ -1,4 +1,4 @@
-package com.qcc.qiuser.Activity
+package com.qcc.qiuser.Activity.kotlinActivity
 
 import android.graphics.PorterDuff
 import android.graphics.drawable.LayerDrawable
@@ -6,15 +6,14 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ProgressBar
 import android.widget.RatingBar
 import android.widget.TextView
 import com.qcc.qiuser.Base.BaseActivity
 import com.qcc.qiuser.Base.BaseData
 import com.qcc.qiuser.Bean.WaitersBean
 import com.qcc.qiuser.R
-import kotlinx.android.synthetic.main.activity_waiter.*
 import org.xutils.x
+import kotlinx.android.synthetic.main.activity_waiter.*
 
 /**
  * Created by Administrator on 2017/5/8.
@@ -39,15 +38,15 @@ class WaiterActivity : BaseActivity() {
         var judges = mPersonDataBean?.waiter_pinglun
         judges?.let {
             for (se in judges) {
-               var s=StringBuffer(se.user_telphone)
-                s.replace(3,7,"****")
-              initPinglun(s.toString(),se.waiter_evaluate)
+                var s = StringBuffer(se.user_telphone)
+                s.replace(3, 7, "****")
+                initPinglun(s.toString(), se.waiter_evaluate)
             }
         }
         var shanchang = mPersonDataBean?.waiter_good_work
         shanchang?.let {
             for (hs in shanchang) {
-               initBestArea(hs.side_name)
+                initBestArea(hs.side_name)
             }
         }
 

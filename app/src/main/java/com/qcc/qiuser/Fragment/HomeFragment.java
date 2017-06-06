@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qcc.qiuser.Activity.LoginActivity;
-import com.qcc.qiuser.Activity.WaiterActivity;
+import com.qcc.qiuser.Activity.kotlinActivity.WaiterActivity;
 import com.qcc.qiuser.Activity.TanTanActivity;
 import com.qcc.qiuser.Base.BaseFragment;
 import com.qcc.qiuser.R;
