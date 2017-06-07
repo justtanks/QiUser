@@ -49,6 +49,7 @@
         <activity android:name=".Activity.ShowWaitersActivity">
         </activity>
         <activity android:name=".Activity.TanTanActivity"></activity>
-    </application>
+        <activity android:name=".Activity.kotlinActivity.FankuiActivity"></activity>
+     </application>
 
 </manifest>

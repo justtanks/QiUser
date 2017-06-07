@@ -17,6 +17,6 @@ public class BaseData {
     public static final String USERlOGIN = BASEURL + "/Home/App/denglu";
     //http://www.qichengcheng.cn/Home/App/zhuce/user/18266142739/password/222222
     public static final String USERREGIST = BASEURL + "/Home/App/zhuce/";
-
-
+    //http://www.qichengcheng.cn/Home/App/fankui/name/neirong/id/18266142739
+    public  static  final  String FANKUI=BASEURL+"/Home/App/fankui/";
 }

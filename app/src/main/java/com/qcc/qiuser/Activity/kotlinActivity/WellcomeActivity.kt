@@ -19,16 +19,11 @@ import java.util.HashMap
 //首页欢迎界面 通过java转换的
 class WellcomeActivity : BaseActivity() {
 
-
-    var te:String?=""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setStates()
         setContentView(R.layout.activity_wellcome)
         x.image().bind(welcome_pic, "http://www.qichengcheng.cn/Uploads/app/index/qichengcheng.jpg")
-//        getPic()
-        testTestNull()
         mHandler.postDelayed({
             toLogin()
             this@WellcomeActivity.finish()
@@ -42,9 +37,7 @@ class WellcomeActivity : BaseActivity() {
 
     }
 
-    private fun testTestNull() {
 
-    }
 
     private fun setStates() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -54,23 +47,23 @@ class WellcomeActivity : BaseActivity() {
         }
     }
 
-    private fun getPic() {
-        NetUtils.Post(BaseData.JIESHAO, HashMap<String, Any>(), object : Callback.CommonCallback<String> {
-            override fun onCancelled(cex: Callback.CancelledException?) {
-            }
-
-            override fun onFinished() {
-
-            }
-
-            override fun onSuccess(result: String?) {
-
-            }
-
-            override fun onError(ex: Throwable?, isOnCallback: Boolean) {
-
-            }
-
-        })
-    }
+//    private fun getPic() {
+//        NetUtils.Post(BaseData.JIESHAO, HashMap<String, Any>(), object : Callback.CommonCallback<String> {
+//            override fun onCancelled(cex: Callback.CancelledException?) {
+//            }
+//
+//            override fun onFinished() {
+//
+//            }
+//
+//            override fun onSuccess(result: String?) {
+//
+//            }
+//
+//            override fun onError(ex: Throwable?, isOnCallback: Boolean) {
+//
+//            }
+//
+//        })
+//    }
 }

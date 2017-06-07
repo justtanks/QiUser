@@ -17,7 +17,7 @@
           android:layout_marginLeft="0dp"
           android:layout_marginRight="0dp"
           android:layout_marginTop="0dp"
-          android:background="@color/maincolor"
+          android:background="@color/zhucecolortitle"
           android:text="@string/mine"
           android:textColor="@color/titletextcolor"
           android:textSize="18sp"
@@ -66,13 +66,13 @@
           app:layout_constraintVertical_bias="0.0"/>
 
       <TextView
-          android:id="@+id/textView4"
+          android:id="@+id/mine_username"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginBottom="0dp"
           android:layout_marginLeft="8dp"
           android:layout_marginTop="0dp"
-          android:text="TextView"
+          android:text="username"
           android:textColor="@color/white"
           android:textSize="16sp"
           app:layout_constraintBottom_toBottomOf="@+id/imageView8"
@@ -112,7 +112,7 @@
           android:layout_marginBottom="0dp"
           android:layout_marginLeft="8dp"
           android:layout_marginTop="0dp"
-          android:text="TextView"
+          android:text="@string/mineorder"
           android:textColor="@color/gray3"
           app:layout_constraintBottom_toBottomOf="@+id/mine_toorder"
           app:layout_constraintLeft_toRightOf="@+id/imageView15"
@@ -157,7 +157,7 @@
           app:layout_constraintHorizontal_bias="0.0"/>
 
       <ImageView
-          android:id="@+id/imageView18"
+          android:id="@+id/mine_daijiedan"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginBottom="0dp"
@@ -174,7 +174,7 @@
           android:id="@+id/imageView19"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:srcCompat="@mipmap/mine_daipingjia"
+          app:srcCompat="@mipmap/mine_yijiedan"
           android:layout_marginRight="0dp"
           app:layout_constraintRight_toRightOf="@+id/imageView17"
           android:layout_marginLeft="0dp"
@@ -186,15 +186,14 @@
           android:id="@+id/imageView20"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:srcCompat="@mipmap/mine_form"
+          app:srcCompat="@mipmap/mine_daipingjia"
           app:layout_constraintLeft_toRightOf="@+id/imageView19"
           android:layout_marginLeft="0dp"
           android:layout_marginRight="0dp"
           app:layout_constraintRight_toRightOf="@+id/imageView17"
           app:layout_constraintBottom_toBottomOf="@+id/imageView19"
           android:layout_marginBottom="0dp"
-          app:layout_constraintTop_toTopOf="@+id/imageView19"
-          android:layout_marginTop="0dp"/>
+          app:layout_constraintHorizontal_bias="0.503"/>
 
       <TextView
           android:id="@+id/textView7"
@@ -205,22 +204,22 @@
           android:layout_marginTop="6dp"
           android:text="@string/daijiedan"
           android:textColor="@color/gray"
-          app:layout_constraintLeft_toLeftOf="@+id/imageView18"
-          app:layout_constraintRight_toRightOf="@+id/imageView18"
-          app:layout_constraintTop_toBottomOf="@+id/imageView18"/>
+          app:layout_constraintLeft_toLeftOf="@+id/mine_daijiedan"
+          app:layout_constraintRight_toRightOf="@+id/mine_daijiedan"
+          app:layout_constraintTop_toBottomOf="@+id/mine_daijiedan"/>
 
       <TextView
           android:id="@+id/textView8"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginLeft="0dp"
-          android:layout_marginRight="0dp"
           android:layout_marginTop="6dp"
-          android:text="@string/daipingjia"
+          android:text="@string/yijiedan"
           android:textColor="@color/gray"
+          app:layout_constraintTop_toBottomOf="@+id/imageView19"
+          android:layout_marginLeft="8dp"
           app:layout_constraintLeft_toLeftOf="@+id/imageView19"
-          app:layout_constraintRight_toRightOf="@+id/imageView19"
-          app:layout_constraintTop_toBottomOf="@+id/imageView19"/>
+          android:layout_marginRight="0dp"
+          app:layout_constraintRight_toRightOf="@+id/imageView19"/>
 
       <TextView
           android:id="@+id/textView9"
@@ -268,7 +267,7 @@
           android:id="@+id/imageView22"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:srcCompat="@mipmap/mine_form"
+          app:srcCompat="@mipmap/mine_fankui"
           app:layout_constraintTop_toTopOf="@+id/button4"
           android:layout_marginTop="0dp"
           app:layout_constraintBottom_toBottomOf="@+id/button4"
@@ -280,14 +279,14 @@
           android:id="@+id/imageView23"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:srcCompat="@mipmap/mine_form"
+          app:srcCompat="@mipmap/mine_kefu"
           app:layout_constraintTop_toTopOf="@+id/button3"
           android:layout_marginTop="0dp"
           android:layout_marginBottom="0dp"
           app:layout_constraintBottom_toTopOf="@+id/button4"
+          app:layout_constraintVertical_bias="0.523"
           android:layout_marginLeft="16dp"
-          app:layout_constraintLeft_toLeftOf="@+id/button3"
-          app:layout_constraintVertical_bias="0.523"/>
+          app:layout_constraintLeft_toLeftOf="@+id/button3"/>
 
       <Button
           android:id="@+id/button5"
@@ -307,7 +306,7 @@
           android:id="@+id/imageView21"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          app:srcCompat="@mipmap/mine_form"
+          app:srcCompat="@mipmap/mine_set"
           app:layout_constraintTop_toTopOf="@+id/button5"
           android:layout_marginTop="0dp"
           app:layout_constraintBottom_toBottomOf="@+id/button5"
@@ -322,7 +321,7 @@
           android:layout_marginBottom="0dp"
           android:layout_marginLeft="10dp"
           android:layout_marginTop="0dp"
-          android:text="TextView"
+          android:text="@string/kefuzhongxin"
           android:textColor="@color/gray3"
           app:layout_constraintBottom_toTopOf="@+id/button4"
           app:layout_constraintLeft_toRightOf="@+id/imageView23"
@@ -336,7 +335,7 @@
           android:layout_marginBottom="0dp"
           android:layout_marginLeft="10dp"
           android:layout_marginTop="0dp"
-          android:text="TextView"
+          android:text="意见反馈"
           android:textColor="@color/gray3"
           app:layout_constraintBottom_toBottomOf="@+id/button4"
           app:layout_constraintLeft_toRightOf="@+id/imageView22"
@@ -350,7 +349,7 @@
           android:layout_marginBottom="0dp"
           android:layout_marginLeft="10dp"
           android:layout_marginTop="0dp"
-          android:text="TextView"
+          android:text="@string/setting"
           android:textColor="@color/gray3"
           app:layout_constraintBottom_toBottomOf="@+id/button5"
           app:layout_constraintLeft_toRightOf="@+id/imageView21"

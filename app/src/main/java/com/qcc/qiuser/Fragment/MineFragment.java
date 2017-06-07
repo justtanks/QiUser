@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.qcc.qiuser.Activity.kotlinActivity.FankuiActivity;
 import com.qcc.qiuser.Base.BaseFragment;
 import com.qcc.qiuser.R;
 import com.qcc.qiuser.databinding.FragmentMineBinding;
@@ -27,20 +28,14 @@ public class MineFragment extends BaseFragment{
     }
 
     private void init() {
-        b.button.setOnClickListener(new View.OnClickListener() {
+        //跳转到意见反馈界面
+        b.button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-                sendIntent.setType("text/plain");
-                startActivity(sendIntent);
-//                getChildFragmentManager();   //double contain in the fragment
-//                getParentFragment();
+               startActivity(new Intent(getActivity(), FankuiActivity.class));
             }
         });
+
     }
-    public void setImText(String string){
-        b.textView4.setText(string);
-    }
+
 }

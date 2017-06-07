@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_waiter.*
 
 /**
  * Created by Administrator on 2017/5/8.
- *
+ * 展示代理人详细信息
  */
 
 class WaiterActivity : BaseActivity() {

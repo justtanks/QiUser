@@ -29,4 +29,12 @@
     <string name="haoping">好评</string>
     <string name="chengdan">成单量</string>
     <string name="haopingshu">好评数</string>
+    <string name="mineorder">我的订单</string>
+    <string name="yijiedan">已接单</string>
+    <string name="kefuzhongxin">客服中心</string>
+    <string name="setting">设置</string>
+    <string name="yijianfankui">意见反馈</string>
+    <string name="lianxifangsh">留下您的联系方式，以便我们联系到您(可选)</string>
+    <string name="wentitijiao">问题提交</string>
+    <string name="choiseway">qq/邮箱/电话任选其一</string>
 </resources>
