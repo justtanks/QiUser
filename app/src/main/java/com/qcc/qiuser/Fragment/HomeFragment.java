@@ -88,9 +88,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
             //收起软键盘
             InputMethodManager im = (InputMethodManager)getActivity().getSystemService(getContext().INPUT_METHOD_SERVICE);
             im.hideSoftInputFromWindow(getActivity().getCurrentFocus().getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-
-
-        return true;
+            return true;
         }
         return false;
     }
@@ -100,8 +98,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
         switch (view.getId()){
             case R.id.home_search_before:
                 Toast.makeText(getContext(), "前查询", Toast.LENGTH_SHORT).show();
-                Intent intent=new Intent(getActivity(), WaiterActivity.class);
-                startActivity(intent);
+
                 break;
             case R.id.home_img_reg:
                 Toast.makeText(getContext(), "注册", Toast.LENGTH_SHORT).show();

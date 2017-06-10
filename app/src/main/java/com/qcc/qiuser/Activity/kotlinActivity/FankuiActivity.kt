@@ -50,13 +50,9 @@ class FankuiActivity : BaseActivity() {
                 toast(resources.getString(R.string.net_error))
             }
 
-            override fun onCancelled(cex: Callback.CancelledException) {
+            override fun onCancelled(cex: Callback.CancelledException) {}
 
-            }
-
-            override fun onFinished() {
-
-            }
+            override fun onFinished() {}
         })
     }
 }
