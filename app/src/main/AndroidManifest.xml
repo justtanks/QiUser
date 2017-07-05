@@ -49,6 +49,8 @@
         <activity android:name=".Activity.kotlinActivity.FankuiActivity"/>
         <activity android:name=".Activity.kotlinActivity.SearchActivity">
         </activity>
+        <activity android:name=".Activity.kotlinActivity.Main2Activity">
+        </activity>
     </application>
 
 </manifest>

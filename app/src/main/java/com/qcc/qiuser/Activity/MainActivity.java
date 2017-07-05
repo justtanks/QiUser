@@ -15,12 +15,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.qcc.qiuser.Adapter.CommonAdapter;
+import com.qcc.qiuser.Base.BaseActivity;
 import com.qcc.qiuser.R;
 
 import java.io.File;
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 //        file.getFreeSpace();//获取所有剩余空间
 //        file.getTotalSpace();//获取所有可用空间
 //        setResult(Activity.RESULT_OK,getIntent());
+
         findViewById(R.id.buttons).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

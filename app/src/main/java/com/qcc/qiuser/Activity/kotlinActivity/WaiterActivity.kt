@@ -51,7 +51,7 @@ class WaiterActivity : BaseActivity() {
         }
 
     }
-
+//初始化评论内容
     private fun initPinglun(username: String, pinglun: String) {
         val view = layoutInflater.inflate(R.layout.item_waiter_judge, waiter_judgecontainer, false)
         val name = view.findViewById(R.id.judge_name) as TextView

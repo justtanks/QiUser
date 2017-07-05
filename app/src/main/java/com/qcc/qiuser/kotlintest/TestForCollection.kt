@@ -10,10 +10,6 @@ import java.util.HashSet
 
 class TestForCollection {
     internal fun getCollection() {
-        val ss = ArrayList<String>()
-        val ss1 = HashSet<String>()
-        val map = HashMap<String, String>()
-        ss.add("hello")
-         map.put("hello","fuck")
+
     }
 }

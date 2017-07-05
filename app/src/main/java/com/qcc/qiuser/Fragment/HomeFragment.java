@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qcc.qiuser.Activity.LoginActivity;
+import com.qcc.qiuser.Activity.kotlinActivity.SearchActivity;
 import com.qcc.qiuser.Activity.kotlinActivity.WaiterActivity;
 import com.qcc.qiuser.Activity.TanTanActivity;
 import com.qcc.qiuser.Base.BaseFragment;
@@ -97,8 +98,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.home_search_before:
-                Toast.makeText(getContext(), "前查询", Toast.LENGTH_SHORT).show();
-
+                startActivity( new Intent(getActivity(), SearchActivity.class));
                 break;
             case R.id.home_img_reg:
                 Toast.makeText(getContext(), "注册", Toast.LENGTH_SHORT).show();
