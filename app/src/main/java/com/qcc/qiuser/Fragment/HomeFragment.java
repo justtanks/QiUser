@@ -13,7 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qcc.qiuser.Activity.LoginActivity;
+import com.qcc.qiuser.Activity.kotlinActivity.GetBrandActivity;
 import com.qcc.qiuser.Activity.kotlinActivity.SearchActivity;
+import com.qcc.qiuser.Activity.kotlinActivity.SearchResultActivity;
 import com.qcc.qiuser.Activity.kotlinActivity.WaiterActivity;
 import com.qcc.qiuser.Activity.TanTanActivity;
 import com.qcc.qiuser.Base.BaseFragment;
@@ -109,7 +111,7 @@ public class HomeFragment extends BaseFragment implements TextView.OnEditorActio
                 startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
             case R.id.home_world_reg:
-                Toast.makeText(getContext(), "国际注册", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), GetBrandActivity.class));
                 break;
             case R.id.home_img_search:
                 Toast.makeText(getContext(), "商标查询", Toast.LENGTH_SHORT).show();

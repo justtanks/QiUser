@@ -25,4 +25,6 @@
     <color name="home_textcolor">#333333</color>
     <color name="bestareatextcolor">#009fff</color>
     <color name="hintcolor">#a9adc1</color>
+    <color name="result_backcolor">#ededed</color>
+    <color name="linecolor">#E1E1E1</color>
 </resources>

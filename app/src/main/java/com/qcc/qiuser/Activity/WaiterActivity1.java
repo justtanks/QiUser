@@ -20,7 +20,7 @@ import com.qcc.qiuser.View.ItemContainer;
 
 /**
  * Created by Administrator on 2017/5/8.
- * 没有使用，使用的是kotlinactivity包的waiterActivity
+ * 没有使用，作为备份的，使用的是kotlinactivity包的waiterActivity
  */
 
 public class WaiterActivity1 extends BaseActivity {

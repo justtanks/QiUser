@@ -37,4 +37,21 @@
     <string name="lianxifangsh">留下您的联系方式，以便我们联系到您(可选)</string>
     <string name="wentitijiao">问题提交</string>
     <string name="choiseway">qq/邮箱/电话任选其一</string>
+    <string name="shangbiaoxiangqing">商标详情</string>
+    <string name="shangbiaoname">商标名称:</string>
+    <string name="shenqinghao">注册号:</string>
+    <string name="shenqingleibie">申请类别:</string>
+    <string name="shenqingren">申请人</string>
+    <string name="shenqingdizhi">申请人地址</string>
+    <string name="shenqingtime">申请日期:</string>
+    <string name="chushenriqi">初审公告日期:</string>
+    <string name="zhuceriqi">注册公告日期:</string>
+    <string name="zhuanyongqixian">专用期限:</string>
+    <string name="fuwuxiangmu">商标/服务项目:</string>
+    <string name="jigouxinxi">代理机构信息:</string>
+    <string name="shenqingshangbiao">商标申请</string>
+    <string name="brandname">商标名称:</string>
+    <string name="inputthebrandname">请输入商标名称</string>
+    <string name="phonenumber">电话号码:</string>
+    <string name="inputthephonenum">请输入电话号码</string>
 </resources>

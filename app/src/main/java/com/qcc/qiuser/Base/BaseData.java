@@ -21,5 +21,9 @@ public class BaseData {
     // 搜索接口I http://www.qichengcheng.cn/Home/App/Shangbiao_chaxun/name/哈哈
     public  static  final  String SEARCH=BASEURL+"/Home/App/Shangbiao_chaxun";
     //搜索返回图片前缀 http://pic.tmkoo.com/pic.php?s=0&zch=
-    public static  final  String IMGPRO="http://pic.tmkoo.com/pic.php?s=0&zch=";
+    public static  final  String IMGPRO="http://pic.tmkoo.com/pic.php?s=1&zch=";
+    //搜索详情界面http://www.qichengcheng.cn/index.php/Home/App/trademark_detail/trademark_id/18521050/trademark_num/1
+    public static final  String XIANGQING=BASEURL+"/index.php/Home/App/trademark_detail";
+    //上传申请商标 http://www.qichengcheng.cn/index.php/Home/App/user_put_order/trademark_name/123/user_tel/123
+    public static  final  String INPUTBRAND=BASEURL+"/index.php/Home/App/user_put_order";
 }

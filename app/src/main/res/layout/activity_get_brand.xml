@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/result_backcolor"
+    android:orientation="vertical"
+    tools:context="com.qcc.qiuser.Activity.kotlinActivity.GetBrandActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/zhucecolortitle"
+
+        >
+
+        <ImageButton
+            android:id="@+id/getbrand_back"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/fanhui"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shenqingshangbiao"
+            android:textColor="@color/titletextcolor"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="@mipmap/getbrand_back"
+        ></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/getbrand_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="@string/brandname"
+            android:textColor="@color/gray3"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/getbrand_brandname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@id/getbrand_title"
+            android:background="@null"
+            android:maxLines="1"
+            android:hint="@string/inputthebrandname"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/getbrand_phonetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="@string/phonenumber"
+            android:textColor="@color/gray3"
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/getbrand_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@id/getbrand_phonetitle"
+            android:maxLines="1"
+            android:background="@null"
+            android:hint="@string/inputthephonenum"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/getbrand_input"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:src="@mipmap/getbrand_inputbrand"
+        />
+
+
+</LinearLayout>

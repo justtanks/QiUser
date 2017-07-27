@@ -332,7 +332,7 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="10dp"
-                    android:text="想学挖掘机，到中国山东找蓝翔，试学一月不受任何费用先学后付解决广大爱好者后顾之忧"
+                    android:text=""
                     android:textColor="@color/gray"
                     android:textSize="13sp"
                     />

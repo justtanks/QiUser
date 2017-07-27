@@ -1,5 +1,6 @@
 package com.qcc.qiuser.Activity.kotlinActivity
 
+ import android.content.Intent
  import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -22,6 +23,7 @@ import org.xutils.common.Callback
 class SearchActivity : BaseActivity(), TextView.OnEditorActionListener {
 
     var adapter:SearchResultAdapter?=null
+    var searchDatas:SearchResultBean.ResultBean?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -52,6 +54,16 @@ class SearchActivity : BaseActivity(), TextView.OnEditorActionListener {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
              }
         })
+        search_lv.setOnItemClickListener { parent, view, position, id -> toResult(position) }
+    }
+    //跳转到搜索详情界面
+    fun toResult(position:Int){
+        var intent=Intent(this,SearchResultActivity::class.java)
+        var bundle=Bundle()
+        bundle.putString("trademark_id",searchDatas?.data?.get(position)?.regNo)
+        bundle.putString("trademark_num",searchDatas?.data?.get(position)?.intCls)
+        intent.putExtra("search",bundle)
+       startActivity(intent)
     }
 // 服务器请求数据
     fun searchResult() {
@@ -77,6 +89,7 @@ class SearchActivity : BaseActivity(), TextView.OnEditorActionListener {
                         search_lv.visibility= View.VISIBLE
                         search_relative1.visibility=View.GONE
                         search_relative2.visibility=View.GONE
+                        searchDatas=result.result
                         adapter?.setDataBeens(result.result.data)
                         adapter?.notifyDataSetChanged()
 

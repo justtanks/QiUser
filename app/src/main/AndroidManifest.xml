@@ -49,7 +49,9 @@
         <activity android:name=".Activity.kotlinActivity.FankuiActivity"/>
         <activity android:name=".Activity.kotlinActivity.SearchActivity">
         </activity>
-        <activity android:name=".Activity.kotlinActivity.Main2Activity">
+        <activity android:name=".Activity.kotlinActivity.SearchResultActivity">
+        </activity>
+        <activity android:name=".Activity.kotlinActivity.GetBrandActivity">
         </activity>
     </application>
 

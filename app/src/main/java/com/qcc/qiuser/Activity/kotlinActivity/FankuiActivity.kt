@@ -26,6 +26,7 @@ class FankuiActivity : BaseActivity() {
     }
 
     internal var ss = SystemSetting(this)
+    //服务器提交内容方法
     private fun tijiao() {
         val params = HashMap<String, Any>()
         var s = fankui_wenti.text.toString()

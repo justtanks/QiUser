@@ -37,8 +37,6 @@ class WellcomeActivity : BaseActivity() {
 
     }
 
-
-
     private fun setStates() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             val window = window
